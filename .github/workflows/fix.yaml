@@ -1,4 +1,4 @@
-name: Always Fail Action
+name: Fixed Hello
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  fail-job:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Force Fail
-        run: exit 1
+      - name: Greet
+        run: echo "Action passed!"
