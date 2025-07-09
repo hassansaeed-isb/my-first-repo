@@ -1,0 +1,16 @@
+name: Always Fail Action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  fail-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Force Fail
+        run: exit 1
